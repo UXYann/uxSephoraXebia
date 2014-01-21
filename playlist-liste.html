@@ -1,0 +1,236 @@
+<!DOCTYPE html5>
+
+<html>
+	<head>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="jquery-2.0.3.js"></script>
+		<title>
+			Playlist
+		</title>
+	</head>
+
+	<body>
+
+		<header>
+			<div id='myHeader'>
+				<span class='backToHome'>&lt; Accueil</span>
+				<span class='pageTitle'>Playlist</span>
+				<span class='backToHomeFarRight'></span>
+			</div>
+		</header>
+
+		<section class='mainContentClient'>
+
+			<div class='produitClientFullName'>
+				Mme Laurence Legrand-Dupont
+			</div>
+
+			<section id="searchFilters">
+				<ul id="productsSearchFilters">
+					<li class='selected' id="filter1">
+						TOUS
+					</li>
+					<li id="filter2">
+						SOIN
+					</li>
+					<li id="filter3">
+						PARF.
+					</li>
+					<li id="filter4">
+						MAQU.
+					</li>
+					<li class='notSelectable'  id="filter5">
+						ACC.
+					</li>
+				</ul>
+			</section>
+
+			<section id="productsList">
+				<div class='productsListProductContainer'>
+					<span class='likeStatus productLiked'>
+					</span>
+					<span class='productsListThumbnails'>
+						<img src="img/productsList1.png" alt="" width="70px" />
+					</span>
+					<span class='productsListTitle'>
+						Esthée Lauder
+						<br/>
+						<span class='productsListSubTitle'>
+							Idealist Sérum Peau Neuve Affinant Lissant
+						</span>
+						<br/>
+						<span class='productsListSpecs'>
+							30ml
+						</span>						
+					</span>
+				</div>
+
+				<div class='productsListProductContainer' id="diorJadore">
+					<span class='likeStatus productUndecided'>
+					</span>
+					<span class='productsListThumbnails'>
+						<img src="img/productsList2.png" alt="" width="70px" />
+					</span>
+					<span class='selectingStatus'>
+						<span class='likeQuestion'>Aime</span>
+						<span class='disLikeQuestion'>N'aime&#160;pas</span>
+					</span>
+				</div>
+
+				<div class='productsListProductContainer'>
+					<span class='likeStatus productDisLiked'>
+					</span>
+					<span class='productsListThumbnails'>
+						<img src="img/productsList3.png" alt="" width="70px" />
+					</span>
+					<span class='productsListTitle'>
+						Issey Miyake
+						<br/>
+						<span class='productsListSubTitle'>
+							L'ean d'issey pour homme intense
+							<br/>
+							Eau de toilette
+						</span>
+						<br/>
+						<span class='productsListSpecs'>
+							50ml
+						</span>
+					</span>
+				</div>	
+
+				<div class='productsListProductContainer'>
+					<span class='likeStatus productliked'>
+					</span>
+					<span class='productsListThumbnails'>
+						<img src="img/productsList5.png" alt="" width="70px" />
+					</span>
+					<span class='productsListTitle'>
+						Diesel
+						<br/>
+						<span class='productsListSubTitle'>
+							Only the Brave
+							<br/>
+							Eau de toilette
+						</span>
+						<br/>
+						<span class='productsListSpecs'>
+							50ml
+						</span>						
+					</span>
+				</div>								
+			</section>
+
+		</section>
+
+		<footer>
+			<div id="myFooter">
+				<span id="menu1">
+					Fiche client
+				</span>
+				<span class='footerItemSelected selected' id="menu2">
+					Playlist
+				</span>
+				<span  id="menu3">
+					Réachat
+				</span>
+				<span id="menu4">
+					Offres
+				</span>
+				<span  id="menu5">
+					Historique
+				</span>
+			</div>
+		</footer>
+
+	</body>
+	<script type="text/javascript">
+
+		function updatingLikeStatus(statusSelected) {
+			console.log(statusSelected);
+		}
+
+
+		$(function() {
+			$(".likeQuestion").click(function() {
+				updatingLikeStatus('like');
+			});
+			$(".disLikeQuestion").click(function() {
+				updatingLikeStatus('dislike');
+			});
+		});	
+
+
+
+/*	Filters selection 	*/
+		function updatingFilterSelection(currentFilter) {
+
+			var container = document.getElementById('productsSearchFilters');
+			var childrenElem = container.getElementsByTagName('li');
+
+			for (var i = 0; i < childrenElem.length; i++) {
+				if(childrenElem[i].id == currentFilter) {
+					childrenElem[i].className = "selected";
+				} else if ( (childrenElem[i].id != currentFilter) && (childrenElem[i].id == "filter5") ) {
+					childrenElem[i].className = "notSelectable";
+				} else {
+					childrenElem[i].className = "";
+				}
+			}
+		}
+
+
+		$(function() {
+			$("#filter1").click(function() {
+				updatingFilterSelection('filter1');
+			});
+			$("#filter2").click(function() {
+				updatingFilterSelection('filter2');
+			});
+			$("#filter3").click(function() {
+				updatingFilterSelection('filter3');
+			});
+			$("#filter4").click(function() {
+				updatingFilterSelection('filter4');
+			});
+			$("#filter5").click(function() {
+				updatingFilterSelection('filter5');
+			});
+		});	
+
+/* 	Tabbar menu 	*/
+		function updatingFooterSelection(currentElem) {
+
+			var container = document.getElementById('myFooter');
+			var childrenElem = container.getElementsByTagName('span');
+
+			for (var i = 0; i < childrenElem.length; i++) {
+				if(childrenElem[i].id == currentElem) {
+					childrenElem[i].className = "footerItemSelected selected";
+				} else {
+					childrenElem[i].className = "";
+				}
+			}
+		}
+
+		$(function() {
+			$("#menu1").click(function() {
+				updatingFooterSelection('menu1');
+			});
+			$("#menu2").click(function() {
+				updatingFooterSelection('menu2');
+			});
+			$("#menu3").click(function() {
+				updatingFooterSelection('menu3');
+			});
+			$("#menu4").click(function() {
+				updatingFooterSelection('menu4');
+			});
+			$("#menu5").click(function() {
+				updatingFooterSelection('menu5');
+			});
+		});			
+	</script>	
+</html>			

@@ -1,0 +1,179 @@
+<!DOCTYPE html5>
+
+<html>
+	<head>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="jquery-2.0.3.js"></script>
+		<title>
+			Fiche Client
+		</title>
+	</head>
+
+	<body>
+
+		<header>
+			<div id='myHeader'>
+				<span class='backToHome'>&lt; Accueil</span>
+				<span class='pageTitle'>Fiche client</span>
+			</div>
+		</header>
+
+		<section class='mainContentClient'>
+
+			<div>
+				<span class='lockingMaxSubHeaderWidth'>
+					<span class='clientFullName'>
+						Mme Laurence Legrand-Dupont
+					</span>
+					<span class='contentGoldenHeader'>
+						Gold
+						<span class='pointsLeft'>
+							115 points
+						</span>
+					</span>
+				</span>
+			</div>
+
+			<div class='rightSideBadge'>
+				<span class='rightSideBadgeHeader'>
+					Offre
+				</span>
+				<span class='rightSideBadgeSale'>
+					-20%
+				</span>
+				<span  class='rightSideBadgeDate'>
+					<span>Validité</span> : 31/01/14
+				</span>				
+			</div>
+
+			<div class='pricingDetails'>
+				<span>
+					999&#160;€
+				</span>
+				<span>
+					RAISONNABLE
+				</span>
+			</div>
+
+			<div class='productCategoryHeader productCategoryHeaderAbsolute'>
+				AXES :
+			</div>
+
+			<div class='productSelectedByClientSepcs'>
+				<span>
+					<img src="img/parfum-picto.png" alt="" width="25px" />
+					<br/>
+					<span>PARFUM</span>
+				</span>
+				<span>
+					<img src="img/pot-picto.png" alt="" width="26px" />
+					<br/>
+					<span>SOIN</span>
+				</span>
+				<span>
+					<img src="img/makeup-picto.png" alt="" width="23px" />
+					<br/>
+					<span class='fadingFontWeight'>MAQUILLAGE</span>
+				</span>
+			</div>
+
+			<div class='rightSideBadge clearingSecondLevel'>
+				<span class='rightSideBadgeHeader'>
+					Playlist
+				</span>
+				<span class='rightSideBadgeImage'>
+					<img src="img/parfum-item.png" alt="" width="30px" />
+				</span>		
+			</div>
+
+			<div class='productImageThumbnail'>
+				MARQUES :
+				<span>
+					C. Thomas, Dr. Brandt, E. Lauder
+				</span>
+			</div>
+
+			<div class='productSelectedByClientSepcs'>
+				COORDONNÉES :
+				<span>
+					<img src="img/got-message.png" alt="" width="52px" />
+					<br/>
+					<span class='fadingFontWeight'>ADRESSE</span>
+				</span>
+				<span>
+					<img src="img/got-email.png" alt="" width="52px" />
+					<br/>
+					<span>EMAIL</span>
+				</span>
+				<span>
+					<img src="img/got-sms.png" alt="" width="52px" />
+					<br/>
+					<span>SMS</span>
+				</span>
+			</div>
+
+			<div class='editCoordinates'>
+				ÉDITER LES COORDONNÉES &gt;
+			</div>
+
+		</section>
+
+		<footer>
+			<div id="myFooter">
+				<span class='footerItemSelected selected' id="menu1">
+					Fiche client
+				</span>
+				<span id="menu2">
+					Playlist
+				</span>
+				<span  id="menu3">
+					Réachat
+				</span>
+				<span id="menu4">
+					Offres
+				</span>
+				<span  id="menu5">
+					Historique
+				</span>
+			</div>
+		</footer>
+
+	</body>
+	<script type="text/javascript">
+
+		function updatingFooterSelection(currentElem) {
+
+			var container = document.getElementById('myFooter');
+			var childrenElem = container.getElementsByTagName('span');
+
+			for (var i = 0; i < childrenElem.length; i++) {
+				if(childrenElem[i].id == currentElem) {
+					childrenElem[i].className = "footerItemSelected selected";
+				} else {
+					childrenElem[i].className = "";
+				}
+			}
+		}
+
+		$(function() {
+			$("#menu1").click(function() {
+				updatingFooterSelection('menu1');
+			});
+			$("#menu2").click(function() {
+				updatingFooterSelection('menu2');
+			});
+			$("#menu3").click(function() {
+				updatingFooterSelection('menu3');
+			});
+			$("#menu4").click(function() {
+				updatingFooterSelection('menu4');
+			});
+			$("#menu5").click(function() {
+				updatingFooterSelection('menu5');
+			});
+		});			
+	</script>	
+</html>

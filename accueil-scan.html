@@ -1,0 +1,172 @@
+<!DOCTYPE html5>
+
+<html>
+	<head>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="jquery-2.0.3.js"></script>
+		<title>
+			Accueil Scan
+		</title>
+	</head>
+
+	<body>
+
+		<header>
+			<div id='myHeader'>
+				<span class='backToHome'>&lt; Accueil</span>
+				<span class='pageTitle'>Playlist</span>
+				<span class='backToHomeFarRight'></span>
+			</div>
+		</header>
+
+		<section class='mainContentClient'>
+			<div class='produitClientFullNameWelcoming'>
+				<span class="welcoming">Bienvenue</span> Sophie Maréchal
+			</div>
+
+			<div id="scanMainContainer">
+				<div class="scanningButton">
+					<img src="img/bar-code.png" alt="" width="77px" />
+					<span class='scanningButtonLabel'>
+						SCAN
+						<br/>
+						Carte / Produit
+					</span>
+				</div>
+				<div id="searchTools">
+					<span class="searchClient">Recherche Client</span>
+					<span class="searchProduct">Recherche Produit</span>
+				</div>
+
+
+			<div class='historicSearchSubHeader'>
+				Historique Clients
+			</div>
+
+			<div class='historicSearchItems'>
+				<span class='historicSearchItemsLocation'>
+					Marseille
+					<br/>
+					13500
+				</span>
+				<span class='historicSearchItemsPeople'>
+					Mlle CAPRIOVITCH Hénéna
+				</span>
+			</div>
+
+			<div class='historicSearchItems'>
+				<span class='historicSearchItemsLocation'>
+					Marseille
+					<br/>
+					13500
+				</span>
+				<span class='historicSearchItemsPeople'>
+					Mlle CAPRIOVITCH Hénéna
+				</span>
+			</div>
+
+			<div class='historicSearchItems'>
+				<span class='historicSearchItemsLocation'>
+					Marseille
+					<br/>
+					13500
+				</span>
+				<span class='historicSearchItemsPeople'>
+					Mlle CAPRIOVITCH Hénéna
+				</span>
+			</div>
+
+			<div class='historicSearchItems'>
+				<span class='historicSearchItemsLocation'>
+					Marseille
+					<br/>
+					13500
+				</span>
+				<span class='historicSearchItemsPeople'>
+					Mlle CAPRIOVITCH Hénéna
+				</span>
+			</div>
+
+			<div class='historicSearchItems'>
+				<span class='historicSearchItemsLocation'>
+					Marseille
+					<br/>
+					13500
+				</span>
+				<span class='historicSearchItemsPeople'>
+					Mlle CAPRIOVITCH Hénéna
+				</span>
+			</div>
+
+			<div class='historicSearchItems'>
+				<span class='historicSearchItemsLocation'>
+					Marseille
+					<br/>
+					13500
+				</span>
+				<span class='historicSearchItemsPeople'>
+					Mlle CAPRIOVITCH Hénéna
+				</span>
+			</div>
+
+		</section>
+
+		<footer>
+			<div id="myFooter">
+				<span class='footerItemSelected selected' id="menu1">
+					Fiche client
+				</span>
+				<span id="menu2">
+					Playlist
+				</span>
+				<span  id="menu3">
+					Réachat
+				</span>
+				<span id="menu4">
+					Offres
+				</span>
+				<span  id="menu5">
+					Historique
+				</span>
+			</div>
+		</footer>
+
+	</body>
+	<script type="text/javascript">
+
+		function updatingFooterSelection(currentElem) {
+
+			var container = document.getElementById('myFooter');
+			var childrenElem = container.getElementsByTagName('span');
+
+			for (var i = 0; i < childrenElem.length; i++) {
+				if(childrenElem[i].id == currentElem) {
+					childrenElem[i].className = "footerItemSelected selected";
+				} else {
+					childrenElem[i].className = "";
+				}
+			}
+		}
+
+		$(function() {
+			$("#menu1").click(function() {
+				updatingFooterSelection('menu1');
+			});
+			$("#menu2").click(function() {
+				updatingFooterSelection('menu2');
+			});
+			$("#menu3").click(function() {
+				updatingFooterSelection('menu3');
+			});
+			$("#menu4").click(function() {
+				updatingFooterSelection('menu4');
+			});
+			$("#menu5").click(function() {
+				updatingFooterSelection('menu5');
+			});
+		});			
+	</script>	
+</html>			

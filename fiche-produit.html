@@ -1,0 +1,132 @@
+<!DOCTYPE html5>
+
+<html>
+	<head>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="jquery-2.0.3.js"></script>
+		<title>
+			Fiche Produit
+		</title>
+	</head>
+
+	<body>
+
+		<header>
+			<div id='myHeader'>
+				<span class='backToHome'>&lt; Accueil</span>
+				<span class='pageTitle'>Fiche Produit</span>
+				<span class='backToHomeFarRight'></span>
+			</div>
+		</header>
+
+		<section class='mainContentClient'>
+			<div class='produitClientFullName'>
+				Mme Laurence Legrand-Dupont
+			</div>
+
+			<section class='productLeaflet'>
+				<div class='productLeafMainContainer'>
+					<span class='productThumbnailDetail'>
+						<img src="img/image-non-dispo.png" alt="" width="135px" />
+					</span>
+					<span class='productBrand'>
+						HERMES
+					</span>
+					<br/>
+					<span class='productBrandDetails'>
+						Terre d'Hermes
+						Eau de parfum
+					</span>	
+					<br/>
+					<span class='productRating'>
+						<span id="star1" class='selected'>
+						</span>
+						<span id="star2" class='selected'>
+						</span>
+						<span id="star3" class='selected'>
+						</span>
+						<span id="star4" class='halfSelected'>
+						</span>
+						<span id="star5">
+						</span>
+						<span id="starsResult"></span>
+					</span>				
+				</div>
+			</section>
+
+			<ul id="productDetailedSepcs">
+				<li>
+					Eau de Parfum Vaporisateur 30 ml
+				</li>
+				<li>
+					Eau de Parfum Vaporisateur 50 ml
+				</li>
+				<li class='productUnavailable'>
+					Eau de Parfum Vaporisateur 50 ml
+				</li>
+			</ul>
+
+			<div class="productDetailedDesc">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec tempor neque. Aliquam nec justo odio. Morbi vel nisi bibendum, lobortis tellus at, tincidunt sem. Praesent nec magna quam. Integer sit amet posuere nulla, quis mattis ligula. In in feugiat tellus. Quisque a rutrum erat. Etiam quis libero eleifend massa feugiat rhoncus in ac sem. Ut vitae ornare diam, a cursus leo. Praesent vel lorem mattis, tempor tellus ullamcorper, cursus mi. Morbi lacinia ullamcorper eros, ac varius orci laoreet sit amet. Maecenas quis elit nec dui faucibus commodo. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque luctus elit a velit vehicula dictum. Aliquam ultricies lacus eu urna scelerisque pharetra.
+			</div>
+		</section>
+
+		<footer>
+			<div id="myFooter">
+				<span id="menu1">
+					Fiche client
+				</span>
+				<span class='footerItemSelected selected' id="menu2">
+					Playlist
+				</span>
+				<span  id="menu3">
+					Réachat
+				</span>
+				<span id="menu4">
+					Offres
+				</span>
+				<span  id="menu5">
+					Historique
+				</span>
+			</div>
+		</footer>
+
+	</body>
+	<script type="text/javascript">
+
+		function updatingFooterSelection(currentElem) {
+
+			var container = document.getElementById('myFooter');
+			var childrenElem = container.getElementsByTagName('span');
+
+			for (var i = 0; i < childrenElem.length; i++) {
+				if(childrenElem[i].id == currentElem) {
+					childrenElem[i].className = "footerItemSelected selected";
+				} else {
+					childrenElem[i].className = "";
+				}
+			}
+		}
+
+		$(function() {
+			$("#menu1").click(function() {
+				updatingFooterSelection('menu1');
+			});
+			$("#menu2").click(function() {
+				updatingFooterSelection('menu2');
+			});
+			$("#menu3").click(function() {
+				updatingFooterSelection('menu3');
+			});
+			$("#menu4").click(function() {
+				updatingFooterSelection('menu4');
+			});
+			$("#menu5").click(function() {
+				updatingFooterSelection('menu5');
+			});
+		});			
+	</script>	
+</html>			
