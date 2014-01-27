@@ -404,6 +404,7 @@ html, body {
 	background: url('img/etoile-pleine.png') transparent center center no-repeat;
 }
 
+
 #productDetailedSepcs {
 	border-top: 1px solid #DBDBDB;
 }
@@ -706,5 +707,25 @@ html, body {
 .displayingMessageOnGrey {
 	background-color: #E6E6E6; 
 	height: 100%;
+}
+
+/*	Playlist Produit 	*/
+
+.tasteButtonsContainer {
+	text-align: center;
+}
+
+.tasteSelectionButtons {
+	background-color: #000000;
+	padding: 10px 20px 10px 40px;
+	color: #FFFFFF;
+	width: 145px;
+	text-align: center;
+	display: inline-block;
+	margin: 5px 5px 10px 5px;
+}
+
+.linkListProductSelected {
+	background-color: #F6CCCB;	
 }
 
