@@ -729,3 +729,18 @@ html, body {
 	background-color: #F6CCCB;	
 }
 
+
+/* 	Réachat 	*/
+#productsSearchFilters li.longFilter {
+	width: 120px;
+}
+
+.buyingDate {
+	background-color: #6B6B6B;
+	color: #FFFFFF;
+	font-weight: 700;
+	padding: 5px;
+	font-size: 0.9em;
+	border-top: 1px solid #202020;
+	border-bottom: 1px solid #CFCFCF;
+}
