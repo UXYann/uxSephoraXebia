@@ -1,0 +1,317 @@
+<!DOCTYPE html5>
+
+<html>
+	<head>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="jquery-2.0.3.js"></script>
+
+		<!-- 	SwipeJS Carrousel 	-->
+		<script type="text/javascript" src="swipe.js"></script>	
+		<!-- 	End Of SwipeJS Carrousel 	-->
+		<title>
+			Historique
+		</title>
+	</head>
+
+	<body>
+
+		<header>
+			<div id='myHeader'>
+				<span class='backToHome'>&lt; Accueil</span>
+				<span class='pageTitle'>Historique</span>
+				<span class='backToHomeFarRight'></span>
+			</div>
+		</header>
+
+
+		<section class='mainContentClient'>
+			<div class='produitClientFullName'>
+				Mme Laurence Legrand-Dupont
+			</div>
+
+			<section class='productLeafletNoSeparator'>
+
+				<div id='slider' class='swipe'>
+					<div class='swipe-wrap'>				
+						<div class='productLeafMainContainer'>
+							<span class='productThumbnailDetail'>
+								<img src="img/image-non-dispo.png" alt="" width="135px" />
+							</span>
+							<span class='productBrand'>
+								HERMES
+							</span>
+							<br/>
+							<span class='productBrandDetails'>
+								Terre d'Hermes
+								Eau de parfum
+							</span>	
+							<br/>
+							<span class='productRating'>
+								<span id="star1" class='selected'>
+								</span>
+								<span id="star2" class='selected'>
+								</span>
+								<span id="star3" class='selected'>
+								</span>
+								<span id="star4" class='halfSelected'>
+								</span>
+								<span id="star5">
+								</span>
+								<span id="starsResult"></span>
+							</span>	
+
+							<ul id="productDetailedSepcs" class='swipeJSItemDetails'>
+								<li class="linkListProductSelected">
+									Eau de Parfum Vaporisateur 30 ml
+								</li>
+								<li>
+									Eau de Parfum Vaporisateur 50 ml
+								</li>
+								<li class='linkListProductSelected'>
+									Eau de Parfum Vaporisateur 50 ml
+								</li>
+							</ul>										
+						</div>
+
+						<div class='productLeafMainContainer'>
+							<span class='productThumbnailDetail'>
+								<img src="img/image-non-dispo.png" alt="" width="135px" />
+							</span>
+							<span class='productBrand'>
+								HERMES
+							</span>
+							<br/>
+							<span class='productBrandDetails'>
+								Terre d'Hermes
+								Eau de parfum
+							</span>	
+							<br/>
+							<span class='productRating'>
+								<span id="star1" class='selected'>
+								</span>
+								<span id="star2" class='selected'>
+								</span>
+								<span id="star3" class='selected'>
+								</span>
+								<span id="star4" class='halfSelected'>
+								</span>
+								<span id="star5">
+								</span>
+								<span id="starsResult"></span>
+							</span>	
+
+							<ul id="productDetailedSepcs" class='swipeJSItemDetails'>
+								<li class="linkListProductSelected">
+									Eau de Parfum Vaporisateur 30 ml
+								</li>
+								<li>
+									Eau de Parfum Vaporisateur 50 ml
+								</li>
+								<li class='linkListProductSelected'>
+									Eau de Parfum Vaporisateur 50 ml
+								</li>
+							</ul>		
+						</div>	
+
+						<div class='productLeafMainContainer'>
+							<span class='productThumbnailDetail'>
+								<img src="img/image-non-dispo.png" alt="" width="135px" />
+							</span>
+							<span class='productBrand'>
+								HERMES
+							</span>
+							<br/>
+							<span class='productBrandDetails'>
+								Terre d'Hermes
+								Eau de parfum
+							</span>	
+							<br/>
+							<span class='productRating'>
+								<span id="star1" class='selected'>
+								</span>
+								<span id="star2" class='selected'>
+								</span>
+								<span id="star3" class='selected'>
+								</span>
+								<span id="star4" class='halfSelected'>
+								</span>
+								<span id="star5">
+								</span>
+								<span id="starsResult"></span>
+							</span>	
+
+							<ul id="productDetailedSepcs" class='swipeJSItemDetails'>
+								<li class="linkListProductSelected">
+									Eau de Parfum Vaporisateur 30 ml
+								</li>
+								<li>
+									Eau de Parfum Vaporisateur 50 ml
+								</li>
+								<li class='linkListProductSelected'>
+									Eau de Parfum Vaporisateur 50 ml
+								</li>
+							</ul>		
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+
+
+		<div id="swipeJSNav">
+			<span class='next'>&gt;</span>
+			<span class='prev'>&lt;</span>
+			<span class='pageControllers'>
+				<em class='on'>&#160;</em>
+				<em>&#160;</em>
+				<em>&#160;</em>				
+			</span>
+		</div>		
+
+		<footer>
+			<div id="myFooter">
+				<span id="menu1">
+					Fiche client
+				</span>
+				<span id="menu2">
+					Playlist
+				</span>
+				<span class='footerItemSelected selected'  id="menu3">
+					Réachat
+				</span>
+				<span id="menu4">
+					Offres
+				</span>
+				<span  id="menu5">
+					Historique
+				</span>
+			</div>
+		</footer>
+
+	</body>
+	<script type="text/javascript">
+
+		function updatingLikeStatus(statusSelected) {
+			console.log(statusSelected);
+		}
+
+
+		$(function() {
+			$(".likeQuestion").click(function() {
+				updatingLikeStatus('like');
+			});
+			$(".disLikeQuestion").click(function() {
+				updatingLikeStatus('dislike');
+			});
+		});	
+
+
+
+/*	Filters selection 	*/
+		function updatingFilterSelection(currentFilter) {
+
+			var container = document.getElementById('productsSearchFilters');
+			var childrenElem = container.getElementsByTagName('li');
+
+			for (var i = 0; i < childrenElem.length; i++) {
+				if(childrenElem[i].id == currentFilter) {
+					childrenElem[i].className = "selected";
+				} else if ( (childrenElem[i].id != currentFilter) && (childrenElem[i].id == "filter5") ) {
+					childrenElem[i].className = "notSelectable";
+				} else {
+					childrenElem[i].className = "";
+				}
+			}
+		}
+
+
+		$(function() {
+			$("#filter1").click(function() {
+				updatingFilterSelection('filter1');
+			});
+			$("#filter2").click(function() {
+				updatingFilterSelection('filter2');
+			});
+			$("#filter3").click(function() {
+				updatingFilterSelection('filter3');
+			});
+			$("#filter4").click(function() {
+				updatingFilterSelection('filter4');
+			});
+			$("#filter5").click(function() {
+				updatingFilterSelection('filter5');
+			});
+		});	
+
+/* 	Tabbar menu 	*/
+		function updatingFooterSelection(currentElem) {
+
+			var container = document.getElementById('myFooter');
+			var childrenElem = container.getElementsByTagName('span');
+
+			for (var i = 0; i < childrenElem.length; i++) {
+				if(childrenElem[i].id == currentElem) {
+					childrenElem[i].className = "footerItemSelected selected";
+				} else {
+					childrenElem[i].className = "";
+				}
+			}
+		}
+
+		$(function() {
+			$("#menu1").click(function() {
+				updatingFooterSelection('menu1');
+			});
+			$("#menu2").click(function() {
+				updatingFooterSelection('menu2');
+			});
+			$("#menu3").click(function() {
+				updatingFooterSelection('menu3');
+			});
+			$("#menu4").click(function() {
+				updatingFooterSelection('menu4');
+			});
+			$("#menu5").click(function() {
+				updatingFooterSelection('menu5');
+			});
+		});			
+	</script>	
+
+	<!-- 	SwipeJS Carrousel 	-->
+
+	<script type="text/javascript">
+		/*	Carousel 	*/
+
+		var bullets = document.getElementById('swipeJSNav').getElementsByTagName('em');
+
+		window.mySwipe = new Swipe(document.getElementById('slider'), {
+		  startSlide: 0,
+		  speed: 400,
+		  //auto: 3000,
+		  continuous: true,
+		  disableScroll: false,
+		  callback: function(pos) {
+					    var i = bullets.length; //Gets the number of items in the var bullets.
+					      while (i--) {
+					        bullets[i].className = ' '; //Sets the inactive position indicators.
+					      }
+					    bullets[pos].className = 'on'; //Applies styling of .on to active position indicator.
+					  },
+		  transitionEnd: function(index, elem) {}
+		});
+
+		$('.prev').click(function() {
+			mySwipe.prev();
+		});
+
+		$('.next').click(function() {
+			mySwipe.next();    	
+		});
+
+	</script>	
+	<!-- 	End of SwipeJS Carrousel 	-->
+
+</html>			

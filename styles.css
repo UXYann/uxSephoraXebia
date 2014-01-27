@@ -744,3 +744,64 @@ html, body {
 	border-top: 1px solid #202020;
 	border-bottom: 1px solid #CFCFCF;
 }
+
+.productLeafletNoSeparator {
+	background-color: #DBDBDB;
+	padding-top: 10px;	
+}
+
+
+/*	 Swipe Carrousel 	*/
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap div {
+  float:left;
+  width: 100%;
+  position: relative;
+}
+
+#swipeJSNav {
+	text-align: center;
+}
+
+.prev {
+	float: left;	
+}
+
+.next {
+	float: right;
+}
+
+.pageControllers em {
+	padding: 1px 5px 1px 5px;
+	border-radius: 10px;
+	margin: 10px 5px 10px 5px;
+	display: inline-block;
+	border: 1px solid #CCCCCC;
+	background-color: #C8C8C8;
+	font-size: 0.5em;
+}
+
+.pageControllers .on {
+	border: 1px solid #61656B;
+	background-color: #646464;
+}
+
+.prev, .next {
+	margin: 0px 20px 10px 20px;
+	color: #646464;
+}
+
+/*	 End of Swipe Carrousel 	*/
+
+.swipeJSItemDetails {
+	clear: both;
+}
