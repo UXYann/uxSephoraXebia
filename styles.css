@@ -805,3 +805,65 @@ html, body {
 .swipeJSItemDetails {
 	clear: both;
 }
+
+
+/*	Offres 	*/
+.statusLabel {
+	color: #323232;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+.statusValues {
+	color: #CE0000;
+	font-size: 1.4em;
+	font-weight: 500;
+}
+
+.settingCellToRight {
+	float: right;
+}
+
+.settingCellToLeft {
+	float: left;
+}
+
+
+.statusOffers {
+	background-color: #E6E6E6;
+	padding: 10px;
+	height: 40px;
+	display: block;
+	border-bottom: 1px solid #969696;
+}
+
+
+
+
+
+#searchFilters {
+	background-color: #E6E6E6;
+	display: block;
+	text-align: center;
+	padding: 10px;
+	height: 60px;
+	border-bottom: 1px solid #969696;
+}
+
+#searchFilters :first-child {
+	border-left: none;
+}
+
+#searchFilters :last-child {
+	border-right: none;
+}
+
+
+
+
+
+
+
+
+
+
